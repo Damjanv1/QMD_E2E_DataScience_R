@@ -1,4 +1,4 @@
-# Data Visualisation Using `ggplot2` {#sec-data-visualisation}
+# Data Visualisation Using `ggplot2` and esquisse {#sec-data-visualisation}
 
 ```{r}
 #| echo: false
@@ -6,15 +6,25 @@
 source("_common.R")
 ```
 
-In this section, we will look into the awesome `R` package `ggplot2` for creating awesome graphics.
+In this section, we will look into doing awesome visulizations in r with the use of ggplot2 and other packages.
 
 ## Introduction and Basics
+
+Let's first talk about why we would do visulization. Visulization is a required technique at many staged of the analytics and data science process but particularly during 
+* Exploratory Data Analysis - in order to quickly visualise and understand distribution and trends within the data that you are working with 
+* Final Presentation - often you will need to condense your findings and visulisations are a useful way of speaking to complex information
 
 The utilization of `ggplot2` for data visualization offers several advantages that make it a preferred choice among data analysts and data scientists. 
 
 One significant benefit is its adherence to the **_grammar of graphics_**, a conceptual framework that provides a consistent and structured approach to creating visualizations. The grammar of graphics breaks down a plot into its fundamental components: data, aesthetics, geometries, scales, and facets. This modular approach allows for greater flexibility and customization. For instance, with ggplot2, users can easily map variables to aesthetics, such as color or size, to reveal patterns and relationships in the data. 
 
 Additionally, `ggplot2` simplifies the process of creating complex plots by providing a wide range of geometries, including points, lines, bars, and areas, which can be tailored to suit specific data types and analysis requirements. By understanding and leveraging the grammar of graphics, users can create visually compelling and informative plots that effectively communicate insights from their data.
+
+## Package for beginners
+
+As a programmer you should adhere to the easiest solution possible as often as possible. Often in the world of visulization this may mean using a drag + drop tool such as Tableau. However one good package that bridges the gap and introduces some of the same functionality in r is esquisse - install.pacakes('esquisse'). Esquisse is a shiny gadget that allows users to interactively interact with their data frames and manipulate the chart with drag and drop functionality before allowing the user to export the code back into their worksheet and then further fine-tune it if they wish. This can be a time saver for both beginners and advanced users. 
+
+Once the esquisse package is installed you can open the applet by running esquisse:::esquisser(). You will then be prompted to connect to any of the data frames in your environment, and from there you are able to drag and drop the features available into the chart. Once done you are interactively also able to set the chart color add labels, titles, subtitles, labels and the entire gamut of editorial actions that you may wish to execute. I often use this to create the base of my charts before exporting the ggplot code back into my environment to make further or more advanced changes (more on these later)
 
 ## Customization and Styling
 
